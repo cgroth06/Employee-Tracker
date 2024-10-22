@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                      
+    "module": "ESNext",                      
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], 
+    "moduleResolution": "node",               
+    "esModuleInterop": true,                  
+    "allowSyntheticDefaultImports": true,     
+    "skipLibCheck": true,                     
+    "rootDir": "src",                       
+    "outDir": "dist",                     
+    "resolveJsonModule": true,                
+    "isolatedModules": true,                 
+    "strict": true,                         
+    "noUnusedLocals": true,                   
+    "noUnusedParameters": true,              
+    "noFallthroughCasesInSwitch": true      
+  },
+  "exclude": ["dist"],                      
+  "include": ["src/**/*"]                         
+}

@@ -1,0 +1,22 @@
+{
+  "name": "02-Challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.10",
+    "@types/pg": "^8.11.10",
+    "typescript": "^5.0.0"
+  },
+  "type": "module"
+}
