@@ -1,17 +1,18 @@
 import { createClient } from './connection.js';
 
 // View departments
+// View all departments
 export const getAllDepartments = async () => {
     const client = createClient();
     await client.connect();
     try {
         const res = await client.query('SELECT * FROM department');
-        return res.rows;
+        console.log('Departments fetched:', res.rows); // Debug log
+        return res.rows; // Ensure this returns the rows
     } catch (error) {
-        console.error('Error fetching departments:', error);
-        return [];
+        console.error('Error fetching departments:', error); // Log any errors
     } finally {
-        await client.end();
+        await client.end(); // Ensure client is always closed
     }
 };
 
@@ -36,7 +37,6 @@ export const addDepartment = async (name: string) => {
         await client.end();
     }
 };
-
 
 // View all roles
 export const getAllRoles = async () => {

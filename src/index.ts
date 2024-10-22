@@ -2,6 +2,8 @@ import inquirer from 'inquirer';
 //import all queries from queries.ts
 import { getAllDepartments, addDepartment, getAllRoles, addRole, getAllEmployees, addEmployee, updateEmployeeRole } from './queries.js';
 
+console.log('Welcome to the Employee Tracker!');
+
 async function menu() {
     const { menuOptions } = await inquirer.prompt([
         {
@@ -45,11 +47,19 @@ async function menu() {
         }
     ]);
 
+console.log('Selected Option:', menuOptions);
+
     switch (menuOptions) {
         case 'View All Departments':
-            const departments = await getAllDepartments();
-            console.table(departments);
+            try {
+                console.log('Fetching all departments...'); // Debug log
+                const departments = await getAllDepartments();
+                console.table(departments); // Should display the table if departments are retrieved
+            } catch (error) {
+                console.error('Error getting departments:', error);
+            }
             break;
+        
 
         case 'view_roles':
             const roles = await getAllRoles();
