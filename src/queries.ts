@@ -7,12 +7,12 @@ export const getAllDepartments = async () => {
     await client.connect();
     try {
         const res = await client.query('SELECT * FROM department');
-        console.log('Departments fetched:', res.rows); // Debug log
-        return res.rows; // Ensure this returns the rows
+        console.log('Departments fetched:', res.rows); 
+        return res.rows; 
     } catch (error) {
-        console.error('Error fetching departments:', error); // Log any errors
+        console.error('Error fetching departments:', error); 
     } finally {
-        await client.end(); // Ensure client is always closed
+        await client.end(); 
     }
 };
 

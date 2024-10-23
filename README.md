@@ -19,7 +19,7 @@ Upon downloading this repo, npm i to install, npm build, and node dist/index.js 
 
 ## Usage
 
-Video Walkthrough is forthcoming...
+[Employee Tracker Video Walkthrough](https://drive.google.com/file/d/11hlY353LrCfeC6T7eYg_2ukMx9fjshd2/view?usp=sharing)
 
 ## Contributions
 

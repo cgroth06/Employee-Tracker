@@ -50,7 +50,7 @@ async function menu() {
 console.log('Selected Option:', menuOptions);
 
     switch (menuOptions) {
-        case 'View All Departments':
+        case 'get_departments':
             try {
                 console.log('Fetching all departments...'); // Debug log
                 const departments = await getAllDepartments();
